@@ -1,33 +1,532 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+button,
+input {
+  outline: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*heade**********************/
+header {
+  background: #414141;
+}
+.header-div {
+  margin-left: 12%;
+  margin-right: 12%;
+}
+.header-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+}
+.image-div {
+  width: 47%; /*505px*/
+}
+.title-div {
+  width: 45%; /*505px*/
+  /* height: 280px; */
   color: white;
+  text-align: left;
+}
+h1 {
+  font-size: 26px;
+  padding: 5% 10% 3.5% 0;
+  word-spacing: 4px;
+}
+.title-div p {
+  padding: 3.5% 10% 3.5% 0;
+  font-size: 16pt;
+  color: rgb(182, 179, 179);
+}
+.button-header {
+  background-color: #458ed2;
+  border: none;
+  color: White;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12pt;
+  padding: 10px 40px 10px 40px;
+  float: left;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.image-header {
+  width: 100%;
+}
+.blue-banner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: #458ed2;
+  color: white;
+  font-size: 12pt;
+}
+h2 {
+  align-self: center;
+  margin-left: 4%;
+  font-size: 16pt;
+  word-spacing: 3px;
+}
+.blue-banner::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 100%;
+  border-top: 50px solid #458ed2;
+  border-right: 40px solid transparent;
+}
+.button-blue-banner {
+  background-color: #efefef;
+  border: none;
+  color: gray;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12pt;
+  padding: 10px 40px 10px 40px;
+  margin: 25px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.border-image-header {
+  border-bottom: 12px solid transparent;
+  border-image: url("/images/Border-BG.jpg") 50 repeat;
+}
+/*body***********/
+body {
+  background-color: #efefef;
+  font-family: "Lato", sans-serif;
+}
+main {
+  margin-left: 12%;
+  margin-right: 12%;
+}
+main p {
+  font-size: 10pt;
+}
+.main1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 6% 0 6% 0;
+}
+.icon {
+  color: white;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: radial-gradient(gray, #474647);
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 auto;
+}
+.main1 div {
+  padding: 3%;
+  text-align: center;
+  width: 24%;
+  position: relative;
+}
+@media only screen and (max-width: 600px) {
+  .header-div {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .main1 div {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .image-div {
+    width: 100px;
+  }
+  .title-div {
+    width: 480px;
+  }
+  h1 {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  .title-div p {
+    padding: 3.5% 10% 3.5% 10px;
+    font-size: 12pt;
+  }
+}
+.main1 div:hover {
+  background-color: white;
+  box-shadow: 20px 0 52px -20px rgba(0, 0, 0, 0.34);
+}
+.main1 div:hover:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 100%;
+  border-top: 35px solid white;
+  border-right: 30px solid transparent;
+}
+.main1 div p {
+  margin-bottom: 10%;
+  padding: 1%;
+}
+.button-main1 {
+  background-color: #458ed2;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 9pt;
+  padding: 10px 25px 10px 25px;
+  margin: 25px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.button-main1:hover {
+  background-color: transparent;
+}
+h3 {
+  font-size: 12pt;
+  padding: 5px;
+  margin-bottom: 4%;
+  margin-top: 4%;
+}
+.border-image-main {
+  border-top: 12px solid transparent;
+  border-image: url("/images/Border-BG.jpg") 50 repeat;
+}
+fieldset {
+  border: 0;
+}
+legend {
+  text-align: center;
+  padding: 10px;
+}
+.main2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 3% 0 6% 0;
+}
+.placeholder-img {
+  width: 100%;
+}
+.main2 div {
+  width: 32%;
+  background-color: white;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .main2 div {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+.main2 div:before {
+  content: "";
+  display: block;
+  height: 80%;
+  width: 20px;
+  box-shadow: 5px 0 20px rgba(41, 40, 40, 0.5);
+  position: absolute;
+  top: 10%;
+  right: 0;
+  border-radius: 100%;
+  z-index: -1;
+}
+.main2 div::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 100%;
+  border-top: 35px solid white;
+  border-right: 30px solid transparent;
+}
+.main2 div p {
+  padding: 10px 20px 20px 20px;
+}
+h4 {
+  padding: 20px 20px 0px 20px;
+}
+.main3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.fieldset1 {
+  padding-right: 1%;
+  width: 66.666%;
+}
+.fieldset2 {
+  padding-left: 1%;
+  width: 33.333%;
+}
+@media screen and (max-width: 600px) {
+  .fieldset1 {
+    width: 100%;
+  }
+  .fieldset2 {
+    width: 100%;
+    margin-bottom: 350px;
+  }
+}
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40px 0 6% 0;
+}
+.testimonials div {
+  position: relative;
+  background-color: white;
+  padding-bottom: 4%;
+  margin-bottom: 7%;
+  width: 48.5%;
+}
+@media (max-width: 600px) {
+  .testimonials div {
+    margin-bottom: 50px;
+  }
+}
+.testimonials div:before {
+  content: "";
+  display: block;
+  height: 80%;
+  width: 20px;
+  box-shadow: 5px 0 20px rgba(41, 40, 40, 0.5);
+  position: absolute;
+  top: 10%;
+  right: 0;
+  border-radius: 100%;
+  z-index: -1;
+}
+.testimonials div::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 100%;
+  border-top: 35px solid white;
+  border-right: 30px solid transparent;
+}
+.testimonials div p {
+  padding: 5% 8% 5% 5%;
+}
+.tabs {
+  background-color: white;
+  position: relative;
+  clear: both;
+  margin-top: 60px;
+}
+.tabs .tab {
+  float: left;
+}
+.checkboxtab {
+  display: none;
+}
+.tabs .tab label {
+  background: #faf8f8;
+  color: gray;
+  padding: 20px;
+  position: relative;
+}
+.checkboxtab:checked ~ label {
+  background: white;
+  color: black;
+  box-shadow: 8px 0px 15px -10px rgba(0, 0, 0, 0.43);
+  z-index: 2;
+}
+.checkboxtab:checked ~ .content {
+  z-index: 1;
+}
+.content {
+  margin-top: 20px;
+  position: absolute;
+  background-color: white;
+  left: 0px;
+  width: 100%;
+  box-shadow: 30px 0px 40px -32px rgba(0, 0, 0, 0.43);
+}
+.content p {
+  padding: 5% 8% 5% 5%;
+}
+#checkbox1,
+#checkbox2 {
+  padding: 0 20px 0 20px;
+}
+.button-design {
+  background-color: #458ed2;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 9pt;
+  padding: 10px 20px 10px 20px;
+  float: right;
+  border-radius: 3px;
+  margin: 5% 9% 7% 0;
+  cursor: pointer;
+}
+.tab label {
+  padding: 10px;
+  background-color: white;
+}
+h5 {
+  padding: 20px 20px 0px 20px;
+}
+/*footer**********/
+footer {
+  background-color: #3f3f3f;
+  width: 100%;
+}
+.footer-div {
+  margin-left: 12%;
+  margin-right: 12%;
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-div div {
+  color: white;
+  width: 24%;
 }
 
-.App-link {
-  color: #61dafb;
+.about p,
+.tweets p {
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+.posts p {
+  font-style: italic;
+  padding-bottom: 10px;
+}
+.posts-border {
+  border-bottom: 2px solid #343434;
+}
+h6 {
+  font-size: 10pt;
+  padding-bottom: 20px;
+  width: 100%;
+}
+footer p {
+  font-size: 10pt;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: gray;
+}
+#flickr-box-container {
+  width: 260px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.flickr-box {
+  background-color: #252525;
+  width: 61px !important;
+  height: 61px !important;
+  margin-bottom: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.footer-bottom {
+  background: #343434;
+}
+.footer-bottom-div {
+  margin-left: 12%;
+  margin-right: 12%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-bottom-div p {
+  align-self: center;
+}
+.social-media-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+}
+.social-media-icons .fab {
+  color: black;
+  font-size: 30px;
+  padding: 27px 0 27px 0;
+}
+.social-media-icons .fab:hover {
+  color: rgb(233, 231, 231);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/*Pinterest tooltip is done differently than the other icons where I used the tooltip-attribute*/
+.tooltip .tooltiptext {
+  visibility: hidden;
+  content: "";
+  float: top;
+  position: absolute;
+  background: gray;
+  text-align: left;
+  color: rgb(233, 231, 231);
+  padding: 5px 25px 5px 7.5px;
+  border-radius: 2px 2px 2px 0;
+  pointer-events: none;
+  left: 15px;
+  bottom: 70px;
+  font-size: 9pt;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltip .tooltiptext::after {
+  border-right: 10px solid transparent;
+  border-top: 10px solid gray;
+  content: "";
+  height: 0;
+  left: 0px;
+  top: 25px;
+  position: absolute;
+  width: 0;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 1.5%;
+  right: 1%;
+}
+.fa-arrow-alt-circle-up {
+  color: black;
+  font-size: 60px;
+  padding-top: 5px;
+}
+@media screen and (max-width: 600px) {
+  .footer-div div {
+    width: 100%;
   }
 }
+/*
+@media only screen and (max-width: 600px) {
+  .footer-bottom-div p {
+    width: 100%;
+  }
+  .social-media-icons {
+width: 100%;
+justify-content: flex-start;
+  }
+.social-media-icons .fab {
+  margin: 0 10px 0 10px;
+}
+}*/
